@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+const { fireRequestLists, makeRequestListFromAction } = require('./request')
+const { create: createSpinner } = require('./spinner')
 const { log } = require('./utils')
 
 const runApp = (args = []) => {
@@ -10,7 +12,11 @@ const runApp = (args = []) => {
 
   const action = args[0].split(', ')
 
-  // Perform weather request
+  createSpinner('Fetching weather information')
+
+  const requestList = makeRequestListFromAction(action)
+
+  fireRequestLists(requestList)
 }
 
 const [executor, ignoredBin, ...args] = process.argv

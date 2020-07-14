@@ -6,6 +6,12 @@
   "scripts": {
     "test": "ava --verbose"
   },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "camelize": "^1.0.0",
+    "chalk": "^4.1.0",
+    "ora": "^4.0.4"
+  },
   "devDependencies": {
     "ava": "^3.10.1",
     "sinon": "^9.0.2"
