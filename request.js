@@ -1,5 +1,6 @@
 const axios = require('axios').default
 const camelize = require('camelize')
+const utils = require('./utils')
 const chalk = require('chalk')
 
 const makeRequest = (location) => {
@@ -46,8 +47,10 @@ const fireRequestLists = async (requestList) => {
       if (result.resolved) {
         const { response } = result
         const weatherData = camelize(response.data)
+        const dataTable = utils.generateTableFromData(weatherData)
 
-        console.log(weatherData)
+        console.log(dataTable.toString())
+        console.log('')
       } else {
         failedLocations.push(result.location)
       }
