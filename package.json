@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Fun weather cli application",
   "main": "weather.js",
+  "bin": {
+    "fun-weather": "weather.js"
+  },
   "scripts": {
     "test": "ava --verbose"
   },
