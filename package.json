@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "Fun weather cli application",
   "main": "weather.js",
+  "scripts": {
+    "test": "ava --verbose"
+  },
+  "devDependencies": {
+    "ava": "^3.10.1"
+  },
   "repository": "https://github.com/Alameen688/fun-weather-cli",
   "author": "Alameen688 <ogundiran12@gmail.com>",
   "license": "MIT"
