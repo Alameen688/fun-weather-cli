@@ -19,6 +19,14 @@ There are two (2) ways to run the app
 
 If you didn't run the installation described above, you can simply point to the `weather.js` file
 
+However you need to make the file executable before doing that, if not, you would need to run the file using the `node` command in your terminal
+```bash
+chmod +x ./weather.js
+```
+
+Proceed to run format - location name, postalcocde or just location name.
+
+For example:
 ```bash
 ./weather.js "New York, 10005, Tokyo, São Paulo, Pluto"
 ```
